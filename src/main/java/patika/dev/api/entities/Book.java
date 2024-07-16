@@ -1,11 +1,16 @@
 package patika.dev.api.entities;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="book")
 public class Book {
 
@@ -43,47 +48,6 @@ public class Book {
     @Column(name="stock_count", nullable = false)
     private Integer book_stock;
 
-    public Integer getBook_stock() {
-        return book_stock;
-    }
-
-    public void setBook_stock(Integer book_stock) {
-        this.book_stock = book_stock;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Integer getPublicationYear() {
-        return publicationYear;
-    }
-
-    public void setPublicationYear(Integer publicationYear) {
-        this.publicationYear = publicationYear;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Book() {
-    }
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
     @Override
     public String toString() {
         return "Book{" +
