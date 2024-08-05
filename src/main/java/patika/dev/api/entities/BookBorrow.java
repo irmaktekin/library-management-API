@@ -27,39 +27,5 @@ public class BookBorrowing {
     @JoinColumn(name="borrowing_book_id", referencedColumnName ="book_id")
     private Book book;
 
-    public Date getBorrowingDate() {
-        return borrowingDate;
-    }
-
-    public void setBorrowingDate(Date borrowingDate) {
-        this.borrowingDate = borrowingDate;
-    }
-
-    public Date getReturnDate() {
-        return returnDate;
-    }
-
-    public void setReturnDate(Date returnDate) {
-        this.returnDate = returnDate;
-    }
-
-    public String getBorrowerName() {
-        return borrowerName;
-    }
-
-    public void setBorrowerName(String borrowerName) {
-        this.borrowerName = borrowerName;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public BookBorrowing() {
-    }
 }
 
