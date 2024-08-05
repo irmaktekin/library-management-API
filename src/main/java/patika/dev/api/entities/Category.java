@@ -1,9 +1,14 @@
 package patika.dev.api.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="category")
 public class Category {
@@ -21,30 +26,4 @@ public class Category {
     @Column(name = "category_description",length = 300, nullable = false)
     private String categoryDescription;
 
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getCategoryDescription() {
-        return categoryDescription;
-    }
-
-    public void setCategoryDescription(String categoryDescription) {
-        this.categoryDescription = categoryDescription;
-    }
-
-    public Category() {
-    }
 }

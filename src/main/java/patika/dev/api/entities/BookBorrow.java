@@ -1,12 +1,16 @@
 package patika.dev.api.entities;
 
 import jakarta.persistence.*;
-
-import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "book_borrowing")
-public class BookBorrowing {
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class BookBorrow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "book_id")

@@ -17,7 +17,7 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "book_id")
-    private int id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name="book_author_id", referencedColumnName ="author_id")
@@ -36,14 +36,14 @@ public class Book {
     private Publisher publisher;
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.PERSIST,fetch =FetchType.LAZY)
-    private List<BookBorrowing> bookBorrowings;
+    private List<BookBorrow> bookBorrowings;
 
 
     @Column(name = "book_name",length = 100, nullable = false, unique = true)
     private String name;
 
     @Column(name=   "publication_year", nullable = false)
-    private Integer publicationYear;
+    private Integer publication_year;
 
     @Column(name="stock_count", nullable = false)
     private Integer book_stock;
@@ -53,7 +53,7 @@ public class Book {
         return "Book{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", publicationYear=" + publicationYear +
+                ", publicationYear=" + publication_year +
                 ", book_stock=" + book_stock +
                 '}';
     }
